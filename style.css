@@ -5,18 +5,190 @@
 }
 
 .container {
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
     height: 100vh;
-    position: relative;
-    overflow: hidden;
     background: #000;
 }
 
 .sideBar {
-    width: 40%;
-    height: 100vh;
-    background: #1d1b1b;
-    position: absolute;
-    top: 0;
-    left: 0;
+   background: #1d1b1b;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    width:100%;
+    background-color: hsl(0, 0%, 23.1%);
+    padding: 7px;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+}
+
+.logo {
+    background: hsl(0, 0%, 11%);
+    color: #222;
+}
+
+.homeIcon {
+    width: 100px;
+    margin: 30px 110px;
+}
+
+.homeIcon img {
+    width: 100px;
+    object-fit: center;
+}
+
+.bodyImage {
+    width: 150px;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bodyImage img {
+    width: 100px;
+    object-fit: center;
+}
+
+.createButton {
+    max-width: 700px;
+    min-width: 380px;
+    padding: 5px;
+    background: hsl(0, 0%, 23.1%);
+    border-radius: 3px;
+    outline: none;
+    margin-top: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#todo {
+    padding: 5px;
+    width: 100%;
+    background: hsl(0, 0%, 23.1%);
+    outline: none;
+    border:none;
+    color: #fff;
+}
+
+.search {
+    margin-top: 4rem;
+    max-width: 250px;
+    min-width: 100px;
+    border-radius: 3px;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 2px solid #fff;
+    border-left: 1px solid hsl(0, 0%, 23.1%);
+    border-right: 1px solid hsl(0, 0%, 23.1%);
+    border-top: 1px solid hsl(0, 0%, 23.1%);
+    outline:none;
+    background: hsl(0, 0%, 12.9%);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+}
+
+#searchBox {
+    padding: 15px;
+    height: 20px;
+    width: 100%;
+    background: hsl(0, 0%, 12.9%);
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+.assignTask, .createTask {
+    max-width: 300px;
+    min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding: 7px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+}
+
+.buttons {
+    margin-top: 6rem;
+}
+
+a:hover {
+    background-color: hsl(0, 0%, 23.1%);
+    padding: 7px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+@media screen and (max-width: 1100px){
+    .createButton {
+        max-width: 620px;
+    }
+
+    .search {
+        max-width: 230px;
+    }
+}
+
+@media screen and (max-width: 978px){
+    .createButton {
+        max-width: 450px;
+    }
+
+    .search {
+        max-width: 185px;
+    }
+}
+
+@media screen and (max-width: 678px){
+    .createButton {
+        max-width: 350px;
+        min-width: 100px;
+        margin-bottom: 8rem;
+    }
+    
+}
+
+@media screen and (max-width: 578px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .homeIcon {
+        margin: 30px 80px;
+    }
+
+    .assignTask, .createTask {
+        max-width:200px;
+        min-width: 100px;
+        margin: 0;
+    }
+
+    .buttons {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-right: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-self: center;
+    }
+
+    .search {
+        margin-top: 2.3rem;
+        height:10px;
+    
+    }
+
+    .sideBar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
